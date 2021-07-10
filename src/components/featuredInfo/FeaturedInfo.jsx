@@ -8,16 +8,16 @@ const FeaturedInfo = (props) => {
 <div className="featured">
   <div className="featuredItem">
     <span className="featuredTitle">
-    <h3> {props.name} </h3>
+    {props.name}
     </span>
     <span className="featuredTitle">
-    <h3> {props.sex} </h3>
+     {props.sex}
     </span>
     <div className="featuredMoneyContainer">
-          <span className="featuredMoney">  <h3> {props.species} </h3></span>
+          <span className="featuredMoney">  {props.species}</span>
      </div>
-     <span className="featuredSub">  <h3> {props.note} </h3> </span>
-     <span className="featuredImage">  <h3>  <h3> <img className="image" src={props.image} alt="" /> </h3> </h3> </span>
+     <span className="featuredSub">  {props.note}  </span>
+     <span className="featuredImage">  <img className="image" src={props.image} alt="" /> </span>
 
   </div>
 

@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Topbar from "./components/Topbar/Topbar"
+import SlideBar from "./components/Slidebar/SlideBar"
+import Home from "./pages/home/Home.jsx"
+import MaleInfo from "./pages/male/MaleInfo.jsx"
+import Female from "./pages/female/Female";
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+    <div>
+    <Topbar />
+       <div className="container">
+        <SlideBar />
+    <Switch>
+    <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/male">
+          <MaleInfo />
+                     </Route>
+          <Route path="/female">
+          <Female />
+          </Route>
+      </Switch>
+      </div>
+      </div>
+      </Router>
   );
 }
 

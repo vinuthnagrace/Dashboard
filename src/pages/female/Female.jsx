@@ -12,7 +12,7 @@ export default function Female() {
     )
       .then((res) => res.json())
   
-      .then((data) => { const filterGender = data.filter((person) => person.sex == 'Female')
+      .then((data) => { const filterGender = data.filter((person) => person.sex === 'Female')
         setData(filterGender);
       })
 

@@ -14,7 +14,7 @@ export default function MaleInfo() {
       .then((res) => res.json())
      
 
-      .then((data) => { const filterGender = data.filter((person) => person.sex == 'Male')
+      .then((data) => { const filterGender = data.filter((person) => person.sex === 'Male')
         setData(filterGender);
       })
 

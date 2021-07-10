@@ -22,7 +22,7 @@ export default function Home() {
     <div className="home">
          {data.map((data) => (
         
-          <FeaturedInfo name={data.name} species={data.species} note={data.note} image={data.image}/>
+          <FeaturedInfo name={data.name} sex={data.sex} species={data.species} note={data.note} image={data.image}/>
         
       ))}
      </div>
